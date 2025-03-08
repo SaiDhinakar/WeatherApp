@@ -1,42 +1,152 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+  font-family: "PT Sans", sans-serif;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #5f747c;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contanier {
+  width: 350px;
+  padding: 20px;
+  background-color: #A5BFCC;
+  border-radius: 8px;
+  box-shadow: 0  4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 2px solid #000000;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #ced9df;
+}
+
+.cityInput{
+  flex:1;
+  height: 30px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ced9df;
+}
+
+.search-icon{
+  padding: 10px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.search-icon img{
+  margin-top: 5px;
+  height: 24px;
+  width: 24px;
+}
+
+.image{
+  text-align: center;
+  height: 160px;
+  margin-bottom: 60px;
+  margin-top: 20px;
+}
+
+.image img{
+  width: 200px;
+  height: 200px;
+}
+
+.temp,
+.location,
+.country{
+  margin-top: 5px;
+  font-size: 20px; /* *************** */
+  color: #333;
+  text-transform: uppercase;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.temp{
+  font-weight: 500;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.location{
+  color: #FB773C;
+  font-weight: 400;
+  font-size: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.country{
+  font-size: 18px;
+  color: #666;
+  font-weight: 500;
 }
 
-.card {
-  padding: 2em;
+.cord{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-.read-the-docs {
-  color: #888;
+.cord div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.cord div span{
+  font-size: 14px;
+}
+
+.humidity-percent,
+.wind-percent,
+.cord div span:nth-child(2){
+  font-size: 18px;
+  font-weight: bold;
+  color: #3C3D37;
+  padding-top: 5px;
+}
+
+.icon{
+  height: 35px;
+  width: 35px;
+}
+
+.data-container{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.element{
+  text-align: center;
+}
+
+.text{
+  font-size: 16px;
+}
+
+.city-not-found,
+.loading-message,
+.error-message{
+  margin-top: 10px;
+  color: #444;
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
 }
